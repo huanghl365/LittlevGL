@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NUC970 文档中心'
+project = '技术笔记'
 copyright = '2020，@xyan_m@163.com'
 author = 'xyan'
 
