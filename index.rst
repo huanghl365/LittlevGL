@@ -32,6 +32,12 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: GUI相关
+
+   ./Doc/03.GUI相关/Gui_Index.rst
+
+.. toctree::
+   :maxdepth: 1
    :caption: 关于
 
    ./README.md
