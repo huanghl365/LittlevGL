@@ -38,6 +38,12 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: Sphinx
+
+   ./Doc/04.Sphinx/vscode+Sphinx+github+readdoc部署在线文档.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: 关于
 
    ./README.md
