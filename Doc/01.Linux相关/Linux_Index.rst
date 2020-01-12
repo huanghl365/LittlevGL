@@ -8,7 +8,10 @@ Linux
    :titlesonly:
    :numbered:
 
-   ./01.环境搭建/环境搭建.md
+   ./01.常用命令/常用命令.md
    ./02.内核编译/内核编译.md
-
- 
+   ./03.NUC972专题/NUC972_Index.rst
+   ./04.IMX6专题/IMX6_Index.rst
+   ./05.tslib移植/tslib移植.md
+   ./06.ubuntu下开发linux/ubuntu下vscode开发linux程序.md
+   ./07.ubuntu安装Beyond/ubuntu安装Beyond.md

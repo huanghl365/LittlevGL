@@ -38,6 +38,19 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: QT
+
+   ./Doc/05.QT/QT_Index.rst
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: GIT
+
+   ./Doc/07.GIT/GIT_Index.rst
+
+.. toctree::
+   :maxdepth: 1
    :caption: Sphinx
 
    ./Doc/04.Sphinx/vscode+Sphinx+github+readdoc部署在线文档.md
