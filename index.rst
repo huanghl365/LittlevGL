@@ -21,6 +21,11 @@
 
    ./Doc/01.Linux相关/Linux_Index.rst
   
+.. toctree::
+   :maxdepth: 1
+   :caption: 单片机相关
+
+   ./Doc/08.单片机/MCU_Index.rst
 
 
 .. toctree::
