@@ -1,28 +1,28 @@
-# GIT常用命令
+# GIT使用
 
-## 添加 SSH key
+## SSH key
 
-1.SSH key目的 可以让你在你的电脑和Code服务器之间建立安全的加密连接
+1. SSH key目的 可以让你在你的电脑和Code服务器之间建立安全的加密连接
 
-2.查看本地电脑是否已经有ssh key：win一般在C:\Users\Administrator.ssh路径，linux一般在路径 ~/.ssh/id_rsa.pub，如果存在则跳过该步骤，否则执行以下命令生成ssh key。
+2. 查看本地电脑是否已经有ssh key：win一般在C:\Users\Administrator.ssh路径，linux一般在路径 ~/.ssh/id_rsa.pub，如果存在则跳过该步骤，否则执行以下命令生成ssh key。
 
 ```
-$ ssh-keygen -t rsa -C "xyan_m@163.com"
+$ ssh-keygen -t rsa -C "xy_m@163.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
 ```
 
 注：以上让输入SSH key的路径，直接确定在默认路径下即可。
 
-3.打开刚才生成的路径，发现里面有三个文件：
+3. 打开刚才生成的路径，发现里面有三个文件：
 
 ![](media/1578836888303.png)
 
 拷贝id_rsa.pub里面的数据到剪切板。
 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8U7lfN5/t8bQzlm5r/T0L/nXW8NKioELuUiUp+QACTTY+UfUo5Jqzuy+8dwhAqgYgrIzXE8k/bLmB/+OHpjVP+AbMJCYn3Lnsr+bDZ1UC6YYcgWMfkzcyH9rgqQdg0wpJOoOO+PrFqhuozx7lL32WavUK7Ggh6xKq0Yc75sxWgAzZGrzpnbsRzkHjv4anhR9Pe4uxLmgiB7hxEsulh6zP7Bvq0+gyc3x2i/5AjskpMTdLysFEIVWLBit0YkLAlopn/KbFve0kgmhALJkozjDovATRb/nA7BAm6DBSO2MVQqJFhTU39ta5AEwyp0YG6STkcJU+Ciwe9HGF1RZ6ZaO6C/zV4DJy/pTv9QtEL/jkihjz4idlq9a2sWjqcgrqa1ZUL6kustkcEvkgbCXtusck311mSIq0KARgSyrFPzWW/eLq4hUM1ufgxGgBkq8ksIjYf4u9JCuJJ1r4d0NQKTU2+kIi0KKDvync7CnI7+4Fi/nirQjDtSBNkHl1cYIeoLE= [xyan_m@163.com](http://mailto:xyan_m@163.com)
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8U7lfN5/t8bQzlm5r/T0L/nXW8NKioELuUiUp+QACTTY+UfUo5Jqzuy+8dwhAqgYgrIzXE8k/bLmB/+OHpjVP+AbMJCYn3Lnsr+bDZ1UC6YYcgWMfkzcyH9rgqQdg0wpJOoOO+PrFqhuozx7lL32WavUK7Ggh6xKq0Yc75sxWgAzZGrzpnbsRzkHjv4anhR9Pe4uxLmgiB7hxEsulh6zP7Bvq0+gyc3x2i/5AjskpMTdLysFEBit0YkLAlopn/KbFve0kgmhALJkozjDovATRb/nA7BAm6DBSO2MVQqJFhTU39ta5AEwyp0YG6STkcJU+Ciwe9HGF1RZ6ZaO6C/zV4DJy/pTv9QtEL/jkihjz4idlq9a2sWjqcgrqa1ZUL6kustkcEvkgbCXtusck311mSIq0KARgSyrFPzWW/eLq4hUM1ufgxGgBkq8ksIjYf4u9JCuJJ1r4d0NQKTU2+kIi0KKDvync7CnI7+4Fi/nirQjDtSBNkHl1cYIeoLE= [xy_m@163.com](http://mailto:xy_m@163.com)
 
-4.到自己的github账户里面添加即可：[github](https://github.com/) 选择右上角头像选择 setings--> SSH and GPG keys，添加即可。 ![](media/1578836914932.png)
+4. 到自己的github账户里面添加即可：[github](https://github.com/) 选择右上角头像选择 setings--> SSH and GPG keys，添加即可。 ![](media/1.jpg)
 
 检查是否添加成功，在本地终端执行以下命令
 
@@ -31,32 +31,34 @@ $ ssh -T git@github.com
 Hi RobotFly! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-## 在github上建立远程厂库
+## Github远程厂库
 
 ![](media/1578836933919.png)
 
 ## 创建本地厂库
 
-1.首先在本地配置git，目的是和code服务器打交道的时候，识别你是谁
+1. 首先在本地配置git，目的是和code服务器打交道的时候，识别你是谁
 
 ```
 git config --global user.name "RobotFly"
-git config --global user.email "xyan_m@163.com"
+git config --global user.email "xy_m@163.com"
 ```
 
-2.创建本地厂库
+2. 创建本地厂库
 
 ```
 git init
 ```
 
-3.添加文件到暂缓区
+3. 如果在工程目录下添加新文件【readme.txt】查看状态如下，提示
 
-```
-git add readme.txt
-```
+   ![](media/image-20200402113453305.png)
 
-4.提交文件到本地厂库（暂缓区->本地厂库）
+
+
+
+
+4. 提交文件到本地厂库（暂缓区->本地厂库）
 
 ![git-repo](media/0.jpg)
 
