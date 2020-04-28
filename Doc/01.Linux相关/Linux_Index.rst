@@ -15,3 +15,4 @@ Linux
    ./06.ubuntu下开发linux/ubuntu下vscode开发linux程序.md
    ./07.ubuntu安装Beyond/ubuntu安装Beyond.md
    ./08.Linux 输入输出重定向/Linux 输入输出重定向.md
+   ./09.Shell脚本配置arm开发环境/Shell脚本配置arm开发环境.md
