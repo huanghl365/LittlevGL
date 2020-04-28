@@ -4,7 +4,6 @@ Linux
 
 .. toctree::
    :maxdepth: 1
-   :caption: Linux相关
    :titlesonly:
    :numbered:
 
