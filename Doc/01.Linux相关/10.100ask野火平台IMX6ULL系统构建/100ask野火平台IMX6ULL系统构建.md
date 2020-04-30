@@ -252,7 +252,7 @@ netargs=setenv bootargs console=${console},${baudrate} root=/dev/nfs ip=dhcp nfs
 setenv bootargs console=ttymxc0,115200 root=/dev/nfs ip=dhcp nfsroot=${serverip}:${nfsroot},v3,tcp,v3,tcp
 ```
 
-3. `netboot`命令
+2. `netboot`命令
 
 ```
 netboot=echo Booting from net ...; run netargs; setenv get_cmd tftp; ${get_cmd} ${image}; ${get_cmd} ${fdt_addr} ${fdt_file}; bootz ${loadaddr} - ${fdt_addr};
