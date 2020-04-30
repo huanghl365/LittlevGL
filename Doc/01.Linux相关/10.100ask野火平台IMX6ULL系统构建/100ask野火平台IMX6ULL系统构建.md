@@ -1,5 +1,10 @@
 # 韦东山 野火硬件IMX6ULL系统构建
 
+- 硬件平台：野火IMX6ULL_Pro
+- 软件资源：默认虚拟机tftp服务器目录：/home/tftpboot
+                     默认虚拟机NFS服务器目录：/home/nfs_rootfs
+- 参考文档：http://wiki.100ask.org/100ask_Fire-imx6ull_pro
+
 ## 资料下载
 
 ### 本地拷贝
