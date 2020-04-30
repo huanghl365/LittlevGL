@@ -16,3 +16,4 @@ Linux
    ./07.ubuntu安装Beyond/ubuntu安装Beyond.md
    ./08.Linux 输入输出重定向/Linux 输入输出重定向.md
    ./09.Shell脚本配置arm开发环境/Shell脚本配置arm开发环境.md
+   ./10.韦东山_野火平台系统构建/韦东山_野火平台IMX6ULL系统构建.md
