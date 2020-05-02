@@ -6,7 +6,7 @@
 
 2. 查看本地电脑是否已经有ssh key：win一般在C:\Users\Administrator.ssh路径，linux一般在路径 ~/.ssh/id_rsa.pub，如果存在则跳过该步骤，否则执行以下命令生成ssh key。
 
-```bash
+```console
 $ ssh-keygen -t rsa -C "xy_m@163.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
@@ -20,7 +20,7 @@ Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
 
 拷贝id_rsa.pub里面的数据到剪切板。
 
-```bash
+```console
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8U7lfN5/t8bQzlm5r/T0L/nXW8NKioELuUiUp+QACTTY+UfUo5Jqzuy+8dwhAqgYgrIzXE8k/bLmB/+OHpjVP+AbMJCYn3Lnsr+bDZ1UC6YYcgWMfkzcyH9rgqQdg0wpJOoOO+PrFqhuozx7lL32WavUK7Ggh6xKq0Yc75sxWgAzZGrzpnbsRzkHjv4anhR9Pe4uxLmgiB7hxEsulh6zP7Bvq0+gyc3x2i/5AjskpMTdLysFEBit0YkLAlopn/KbFve0kgmhALJkozjDovATRb/nA7BAm6DBSO2MVQqJFhTU39ta5AEwyp0YG6STkcJU+Ciwe9HGF1RZ6ZaO6C/zV4DJy/pTv9QtEL/jkihjz4idlq9a2sWjqcgrqa1ZUL6kustkcEvkgbCXtusck311mSIq0KARgSyrFPzWW/eLq4hUM1ufgxGgBkq8ksIjYf4u9JCuJJ1r4d0NQKTU2+kIi0KKDvync7CnI7+4Fi/nirQjDtSBNkHl1cYIeoLE= [xy_m@163.com](http://mailto:)
 ```
 
@@ -30,7 +30,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8U7lfN5/t8bQzlm5r/T0L/nXW8NKioELuUiUp+QAC
 
 检查是否添加成功，在本地终端执行以下命令
 
-```bash
+```console
 $ ssh -T git@github.com
 Hi RobotFly! You've successfully authenticated, but GitHub does not provide shell access.
 ```
@@ -47,7 +47,7 @@ Hi RobotFly! You've successfully authenticated, but GitHub does not provide shel
 
 ### 方案2
 
-```bash
+```console
 git remote rm origin
 git remote add origin [url]
 ```
@@ -74,20 +74,20 @@ git remote add origin [url]
 
 1. 首先在本地配置git，目的是和code服务器打交道的时候，识别你是谁
 
-   ```bash
+   ```console
    git config --global user.name "RobotFly"
    git config --global user.email "xy_m@163.com"
    ```
 
 2. 创建本地厂库
 
-   ```bash
+   ```console
    git init
    ```
 
 3. 增加新文件到暂缓区(工作区 -> stage)
 
-   ```bash
+   ```console
    git status       		 	#查看工作区修改文件状态 
    git rm --cached <file> 		# 如果想把暂缓区的文件退回到工作区
    git add readme.md 			#添加文件readme.md到暂缓区
@@ -103,19 +103,19 @@ git remote add origin [url]
 
 5. 查看关联的远程仓库地址
 
-   ```bash
+   ```console
    git remote -v
    ```
 
 6. 关联本地厂库到远程厂库
 
-   ```bash
+   ```console
    git remote add origin git@github.com:RobotFly/4G.git
    ```
 
 7. 提交本地厂库代码到远程厂库 
 
-   ```bash
+   ```console
    git push -u origin master # 第一次推送到远程仓库
    git push origin master    # 以后就用该命令推送到远程仓库
    ```
@@ -130,7 +130,7 @@ git remote add origin [url]
 
 9. 查看提交日志
 
-   ```bash
+   ```console
    git log                    # 显示提交日志的全部信息
    
    git log --pretty=oneline   # 如果嫌弃输出信息太多，执行以下命令
@@ -138,13 +138,13 @@ git remote add origin [url]
 
 10. 历史命令 可以查看历史所有命令 
 
-    ```bash
+    ```console
     git reflog 
     ```
 
 11. 回退到版本
 
-    ```bash
+    ```console
     git reset --hard HEAD^	  # 回退上个版本，HEAD 代表当前版本，eg:HEAD^^ 代表上上个版本
     git reset --hard~100      # 回退上100个版本，后面的数字代表往前回退多少个版本  
     git reset --hard 1094a    # 回退到指定 1094a版本
@@ -165,7 +165,7 @@ git checkout -- file #可以丢弃工作区的修改
 
 下图显示是基本的操作
 
-```bash
+```console
 1.第一部分
 git init							# 初始化仓库
 在文件夹下新建文件 1.txt				  # 工作区新增文件 
@@ -359,7 +359,7 @@ $ git switch master
 
 ### 管理工作区的修改
 
-```bash
+```console
 git add file        # 把修改提交到暂缓区
 git checkout --file # 放弃本次修改  最新版本的git 用 git restore <file> 来放弃修改
 ```
@@ -370,7 +370,7 @@ git checkout --file # 放弃本次修改  最新版本的git 用 git restore <fi
 
 ### 管理暂缓区修改
 
-```bash
+```console
 git commit -m "log"    # 暂缓区 -》 仓库（master）
 git reset HEAD <file>  # 暂缓区-》工作区 
 ```
@@ -402,7 +402,7 @@ git push origin master
 
    - 的确是想删除这个文件：
 
-     ```bash
+     ```console
      git rm test.txt
      如果想保存本次删除就往下执行
      git add .
@@ -413,7 +413,7 @@ git push origin master
 
    - 自己不小心误删了，那么就想办法恢复该文件(此时文件在暂缓区或者仓库)
 
-     ```bash
+     ```console
      git checkout -- test.txt # 因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
      ```
 
@@ -436,7 +436,7 @@ git push origin master
 
 3. 这个时候想执行 `git merge dev`命令合并dev到master，想想，git这个时候会怎么处理，答案是，git会报个冲突，然后提示用户需要手动解决冲突后再 执行 `git add git commit`命令提交，完成本次合并。
 
-   ```bash
+   ```console
    git status  # 查看冲突
    ```
 
@@ -450,7 +450,7 @@ git push origin master
 
    最后我们删除掉分支feature1（即dev）
 
-   ```bash
+   ```console
    git branch -d dev
    ```
 
@@ -474,14 +474,14 @@ git push origin master
 
 首先，仍然创建并切换`dev`分支：
 
-```bash
+```console
 $ git switch -c dev
 Switched to a new branch 'dev'
 ```
 
 修改readme.txt文件，并提交一个新的commit：
 
-```bash
+```console
 $ git add readme.txt 
 $ git commit -m "add merge"
 [dev f52c633] add merge
@@ -497,7 +497,7 @@ Switched to branch 'master'
 
 准备合并`dev`分支，请注意`--no-ff`参数，表示禁用`Fast forward`：
 
-```bash
+```console
 $ git merge --no-ff -m "merge with no-ff" dev
 Merge made by the 'recursive' strategy.
  readme.txt | 1 +
@@ -508,7 +508,7 @@ Merge made by the 'recursive' strategy.
 
 合并后，我们用`git log`看看分支历史：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 *   e1e9c68 (HEAD -> master) merge with no-ff
 |\  
@@ -550,7 +550,7 @@ Git分支十分强大，在团队开发中应该充分应用。
 
 当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支`issue-101`来修复它，但是，等等，当前正在`dev`上进行的工作还没有提交：
 
-```bash
+```console
 $ git status
 On branch dev
 Changes to be committed:
@@ -569,7 +569,7 @@ Changes not staged for commit:
 
 幸好，Git还提供了一个`stash`功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
 
-```bash
+```console
 $ git stash
 Saved working directory and index state WIP on dev: f52c633 add merge
 ```
@@ -578,7 +578,7 @@ Saved working directory and index state WIP on dev: f52c633 add merge
 
 首先确定要在哪个分支上修复bug，假定需要在`master`分支上修复，就从`master`创建临时分支：
 
-```bash
+```console
 $ git checkout master
 Switched to branch 'master'
 Your branch is ahead of 'origin/master' by 6 commits.
@@ -590,7 +590,7 @@ Switched to a new branch 'issue-101'
 
 现在修复bug，需要把“Git is free software ...”改为“Git is a free software ...”，然后提交：
 
-```bash
+```console
 $ git add readme.txt 
 $ git commit -m "fix bug 101"
 [issue-101 4c805e2] fix bug 101
@@ -599,7 +599,7 @@ $ git commit -m "fix bug 101"
 
 修复完成后，切换到`master`分支，并完成合并，最后删除`issue-101`分支：
 
-```bash
+```console
 $ git switch master
 Switched to branch 'master'
 Your branch is ahead of 'origin/master' by 6 commits.
@@ -613,7 +613,7 @@ Merge made by the 'recursive' strategy.
 
 太棒了，原计划两个小时的bug修复只花了5分钟！现在，是时候接着回到`dev`分支干活了！
 
-```bash
+```console
 $ git switch dev
 Switched to branch 'dev'
 
@@ -624,7 +624,7 @@ nothing to commit, working tree clean
 
 工作区是干净的，刚才的工作现场存到哪去了？用`git stash list`命令看看：
 
-```bash
+```console
 $ git stash list
 stash@{0}: WIP on dev: f52c633 add merge
 ```
@@ -635,7 +635,7 @@ stash@{0}: WIP on dev: f52c633 add merge
 
 另一种方式是用`git stash pop`，恢复的同时把stash内容也删了：
 
-```bash
+```console
 $ git stash pop
 On branch dev
 Changes to be committed:
@@ -654,13 +654,13 @@ Dropped refs/stash@{0} (5d677e2ee266f39ea296182fb2354265b91b3b2a)
 
 再用`git stash list`查看，就看不到任何stash内容了：
 
-```bash
+```console
 $ git stash list
 ```
 
 你可以多次stash，恢复的时候，先用`git stash list`查看，然后恢复指定的stash，用命令：
 
-```bash
+```console
 $ git stash apply stash@{0}
 ```
 
@@ -746,14 +746,14 @@ Deleted branch feature-vulcan (was 287773e).
 
 要查看远程库的信息，用`git remote`：
 
-```bash
+```console
 $ git remote
 origin
 ```
 
 或者，用`git remote -v`显示更详细的信息：
 
-```bash
+```console
 $ git remote -v
 origin  git@github.com:michaelliao/learngit.git (fetch)
 origin  git@github.com:michaelliao/learngit.git (push)
@@ -765,13 +765,13 @@ origin  git@github.com:michaelliao/learngit.git (push)
 
 推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
 
-```bash
+```console
 $ git push origin master
 ```
 
 如果要推送其他分支，比如`dev`，就改成：
 
-```bash
+```console
 $ git push origin dev
 ```
 
@@ -792,7 +792,7 @@ $ git push origin dev
 
 现在，模拟一个你的小伙伴，可以在另一台电脑（注意要把SSH Key添加到GitHub）或者同一台电脑的另一个目录下克隆：
 
-```bash
+```console
 $ git clone git@github.com:michaelliao/learngit.git
 Cloning into 'learngit'...
 remote: Counting objects: 40, done.
@@ -804,20 +804,20 @@ Resolving deltas: 100% (14/14), done.
 
 当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的`master`分支。不信可以用`git branch`命令看看：
 
-```bash
+```console
 $ git branch
 * master
 ```
 
 现在，你的小伙伴要在`dev`分支上开发，就必须创建远程`origin`的`dev`分支到本地，于是他用这个命令创建本地`dev`分支：
 
-```bash
+```console
 $ git checkout -b dev origin/dev
 ```
 
 现在，他就可以在`dev`上继续修改，然后，时不时地把`dev`分支`push`到远程：
 
-```bash
+```console
 $ git add env.txt
 
 $ git commit -m "add env"
@@ -839,7 +839,7 @@ To github.com:michaelliao/learngit.git
 
 你的小伙伴已经向`origin/dev`分支推送了他的提交，而碰巧你也对同样的文件作了修改，并试图推送：
 
-```bash
+```console
 $ cat env.txt
 env
 
@@ -862,7 +862,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 推送失败，因为你的小伙伴的最新提交和你试图推送的提交有冲突，解决办法也很简单，Git已经提示我们，先用`git pull`把最新的提交从`origin/dev`抓下来，然后，在本地合并，解决冲突，再推送：
 
-```bash
+```console
 $ git pull
 There is no tracking information for the current branch.
 Please specify which branch you want to merge with.
@@ -877,14 +877,14 @@ If you wish to set tracking information for this branch you can do so with:
 
 `git pull`也失败了，原因是没有指定本地`dev`分支与远程`origin/dev`分支的链接，根据提示，设置`dev`和`origin/dev`的链接：
 
-```bash
+```console
 $ git branch --set-upstream-to=origin/dev dev
 Branch 'dev' set up to track remote branch 'dev' from 'origin'.
 ```
 
 再pull：
 
-```bash
+```console
 $ git pull
 Auto-merging env.txt
 CONFLICT (add/add): Merge conflict in env.txt
@@ -893,7 +893,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 这回`git pull`成功，但是合并有冲突，需要手动解决，解决的方法和分支管理中的解决冲突完全一样。解决后，提交，再push：
 
-```bash
+```console
 $ git commit -m "fix env conflict"
 [dev 57c53ab] fix env conflict
 
@@ -935,7 +935,7 @@ To github.com:michaelliao/learngit.git
 
 每次合并再push后，分支变成了这样：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 * d1be385 (HEAD -> master, origin/master) init hello
 *   e5e69f1 Merge branch 'dev'
@@ -969,7 +969,7 @@ Git有一种称为rebase的操作，有人把它翻译成“变基”。
 
 在和远程分支同步后，我们对`hello.py`这个文件做了两次提交。用`git log`命令看看：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 * 582d922 (HEAD -> master) add author
 * 8875536 add comment
@@ -987,7 +987,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 现在我们尝试推送本地分支：
 
-```bash
+```console
 $ git push origin master
 To github.com:michaelliao/learngit.git
  ! [rejected]        master -> master (fetch first)
@@ -1001,7 +1001,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 很不幸，失败了，这说明有人先于我们推送了远程分支。按照经验，先pull一下：
 
-```bash
+```console
 $ git pull
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (1/1), done.
@@ -1018,7 +1018,7 @@ Merge made by the 'recursive' strategy.
 
 再用`git status`看看状态：
 
-```bash
+```console
 $ git status
 On branch master
 Your branch is ahead of 'origin/master' by 3 commits.
@@ -1031,7 +1031,7 @@ nothing to commit, working tree clean
 
 用`git log`看看：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 *   e0ea545 (HEAD -> master) Merge branch 'master' of github.com:michaelliao/learngit
 |\  
@@ -1057,7 +1057,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 这个时候，rebase就派上了用场。我们输入命令`git rebase`试试：
 
-```bash
+```console
 $ git rebase
 First, rewinding head to replay your work on top of it...
 Applying: add comment
@@ -1074,7 +1074,7 @@ Auto-merging hello.py
 
 输出了一大堆操作，到底是啥效果？再用`git log`看看：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 * 7e61ed4 (HEAD -> master) add author
 * 3611cfe add comment
@@ -1089,7 +1089,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 最后，通过push操作把本地分支推送到远程：
 
-```bash
+```console
 Mac:~/learngit michael$ git push origin master
 Counting objects: 6, done.
 Delta compression using up to 4 threads.
@@ -1103,7 +1103,7 @@ To github.com:michaelliao/learngit.git
 
 再用`git log`看看效果：
 
-```bash
+```console
 $ git log --graph --pretty=oneline --abbrev-commit
 * 7e61ed4 (HEAD -> master, origin/master) add author
 * 3611cfe add comment
@@ -1279,7 +1279,7 @@ git push gitee master
 
 这样一来，我们的本地库就可以同时与多个远程库互相同步：
 
-```bash
+```console
 ┌─────────┐ ┌─────────┐
 │ GitHub  │ │  Gitee  │
 └─────────┘ └─────────┘
@@ -1305,7 +1305,7 @@ git push gitee master
 
 我们只需要敲一行命令，告诉Git，以后`st`就表示`status`：
 
-```bash
+```console
 $ git config --global alias.st status
 ```
 
@@ -1313,7 +1313,7 @@ $ git config --global alias.st status
 
 当然还有别的命令可以简写，很多人都用`co`表示`checkout`，`ci`表示`commit`，`br`表示`branch`：
 
-```bash
+```console
 $ git config --global alias.co checkout
 $ git config --global alias.ci commit
 $ git config --global alias.br branch
@@ -1321,7 +1321,7 @@ $ git config --global alias.br branch
 
 以后提交就可以简写成：
 
-```bash
+```console
 $ git ci -m "bala bala bala..."
 ```
 
@@ -1329,31 +1329,31 @@ $ git ci -m "bala bala bala..."
 
 在[撤销修改](https://www.liaoxuefeng.com/wiki/896043488029600/897889638509536)一节中，我们知道，命令`git reset HEAD file`可以把暂存区的修改撤销掉（unstage），重新放回工作区。既然是一个unstage操作，就可以配置一个`unstage`别名：
 
-```bash
+```console
 $ git config --global alias.unstage 'reset HEAD'
 ```
 
 当你敲入命令：
 
-```bash
+```console
 $ git unstage test.py
 ```
 
 实际上Git执行的是：
 
-```bash
+```console
 $ git reset HEAD test.py
 ```
 
 配置一个`git last`，让其显示最后一次提交信息：
 
-```bash
+```console
 $ git config --global alias.last 'log -1'
 ```
 
 这样，用`git last`就能显示最近一次的提交：
 
-```bash
+```console
 $ git last
 commit adca45d317e6d8a4b23f9811c3d7b7f0f180bfe2
 Merge: bd6ae48 291bea8
@@ -1365,7 +1365,7 @@ Date:   Thu Aug 22 22:49:22 2013 +0800
 
 甚至还有人丧心病狂地把`lg`配置成了：
 
-```bash
+```console
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
@@ -1381,7 +1381,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 配置文件放哪了？每个仓库的Git配置文件都放在`.git/config`文件中：
 
-```bash
+```console
 $ cat .git/config 
 [core]
     repositoryformatversion = 0
@@ -1428,7 +1428,7 @@ $ cat .gitconfig
 
 
 
-```bash
+```console
 git remote -v                  # 用git remote查看远程主机状态
 git remote add upstream git@github.com:xxx/xxx.git # 关联远程主机
 
@@ -1451,7 +1451,7 @@ Byound Commpare安装路径：D:/Program Files (x86)/Beyond Compare/BCompare.exe
 
 添加以下内容保存即可：
 
-```bash
+```console
 [gui]
     encoding = utf-8
 [diff]
