@@ -196,11 +196,11 @@ git --reset hard 版本号             # 恢复到最新版本即可
 
 - 下图演示的是第一部分的操作
 
-![](media/GIF01.gif)
+<img src="media/GIF01.gif" style="zoom: 80%;" />
 
 - 下图演示的是第二部分的操作
 
-![](media/GIF02.gif)
+<img src="media/GIF02.gif" style="zoom:80%;" />
 
 ## 分支管理
 
@@ -353,7 +353,7 @@ $ git switch master
 
 下图演示的是创建新分支，然后在新分支上执行修改后，又切换为主分支，合并dev分支到master上，然后删除dev分支的过程
 
-![](media/GIF03.gif)
+<img src="media/GIF03.gif" style="zoom:80%;" />
 
 ## 管理修改
 
@@ -458,11 +458,11 @@ git push origin master
 
    **下图显示的是上面的整个流程操作**
 
-![](media/GIF04.gif)
+<img src="media/GIF04.gif" style="zoom:80%;" />
 
 **手动修改1.txt冲突，并重新提交到master，且删除了dev分支**
 
-![](media/GIF05.gif)
+<img src="media/GIF05.gif" style="zoom:80%;" />
 
 ## 分支管理策略
 
@@ -664,7 +664,7 @@ $ git stash list
 $ git stash apply stash@{0}
 ```
 
-![](media/22.gif)
+<img src="media/22.gif" style="zoom:80%;" />
 
 ## feature分支
 
@@ -736,7 +736,7 @@ Deleted branch feature-vulcan (was 287773e).
 
 如果要丢弃一个没有被合并过的分支，可以通过`git branch -D `强行删除
 
-![](media/GIF06.gif)
+<img src="media/GIF06.gif" style="zoom:80%;" />
 
 
 
@@ -784,7 +784,7 @@ $ git push origin dev
 
 总之，就是在Git中，分支完全可以在本地自己藏着玩，是否推送，视你的心情而定！
 
-![](media/GIF07.gif)
+<img src="media/GIF07.gif" style="zoom:80%;" />
 
 ### 抓取分支
 
@@ -835,7 +835,7 @@ To github.com:michaelliao/learngit.git
    f52c633..7a5e5dd  dev -> dev
 ```
 
-![](media/GIF08.gif)
+<img src="media/GIF08.gif" style="zoom:80%;" />
 
 你的小伙伴已经向`origin/dev`分支推送了他的提交，而碰巧你也对同样的文件作了修改，并试图推送：
 
@@ -907,7 +907,7 @@ To github.com:michaelliao/learngit.git
    7a5e5dd..57c53ab  dev -> dev
 ```
 
-![](media/GIF09.gif)
+<img src="media/GIF09.gif" style="zoom:80%;" />
 
 因此，多人协作的工作模式通常是这样：
 
@@ -1114,7 +1114,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 远程分支的提交历史也是一条直线。
 
-![](media/GIF10.gif)
+<img src="media/GIF10.gif" style="zoom:80%;" />
 
 
 
