@@ -8,6 +8,4 @@ GIT
    :titlesonly:
    :numbered:
 
-   ./01.GIT更改远程厂库地址/git更改远程仓库地址.md
-   ./02.GIT使用说明/git使用说明.md
-   ./03.GIT版本管理/GIT版本管理.md
+   ./01.GIT使用说明/git使用说明.md
