@@ -53,4 +53,4 @@ win下安装vscode插件：`remote development`
 
 ## 免密登陆
 
-![](media/01.gif)
+ 
