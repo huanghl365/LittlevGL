@@ -18,3 +18,5 @@ Linux
    ./09.Shell脚本配置arm开发环境/Shell脚本配置arm开发环境.md
    ./10.100ask野火平台IMX6ULL系统构建/100ask野火平台IMX6ULL系统构建.md
    ./11.Makefile使用说明/Makefile使用说明.md
+   ./12.Cmake工程结构/CMake.md
+   ./13.Win下VsCodeSSH连接Ubuntu/Win下VsCodeSSH连接Ubuntu.md
