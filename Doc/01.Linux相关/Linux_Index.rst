@@ -20,3 +20,5 @@ Linux
    ./11.Makefile使用说明/Makefile使用说明.md
    ./12.Cmake工程结构/CMake.md
    ./13.Win下VsCodeSSH连接Ubuntu/Win下VsCodeSSH连接Ubuntu.md
+   ./14.Scons构建系统/scons.md
+   ./15.Linux库使用说明/Linux库使用说明.md
