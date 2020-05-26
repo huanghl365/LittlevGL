@@ -23,3 +23,4 @@ Linux
    ./14.Scons构建系统/scons.md
    ./15.Linux库使用说明/Linux库使用说明.md
    ./16.制作buildroot文件系统/制作buildroot文件系统.rst
+   ./17.IMX6ULL官方Uboot移植/IMX6ULL官方Uboot移植.md
