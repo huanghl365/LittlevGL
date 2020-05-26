@@ -1,3 +1,7 @@
+# IMX6ULL U-Boot使用和移植
+
+
+
 ## U-Boot常用命令
 
 1. `bdinfo`：查看板子信息；
