@@ -636,3 +636,125 @@ mv mx6ull_ming_emmc/mx6ullevk.c  mx6ull_ming_emmc/mx6ull_ming_emmc.c #重命名�
 
 
 至此修改完毕：编译下载运行验证即可
+
+#### 问题解决
+
+##### 显示屏驱动
+
+- `board/freescale/mx6ull_ming_emmc/mx6ull_ming_emmc.c`
+
+  ```bash
+  struct display_info_t const displays[] = {{
+          .bus = MX6UL_LCDIF1_BASE_ADDR,
+          .addr = 0,
+          .pixfmt = 24,
+          .detect = NULL,
+          .enable = do_enable_parallel_lcd,
+          .mode   = {
+                  .name           = "TFT43AB",
+                  .xres           = 480,
+                  .yres           = 272,
+                  .pixclock       = 108695,
+                  .left_margin    = 8,
+                  .right_margin   = 4,
+                  .upper_margin   = 2,
+                  .lower_margin   = 4,
+                  .hsync_len      = 41,
+                  .vsync_len      = 10,
+                  .sync           = 0,
+                  .vmode          = FB_VMODE_NONINTERLACED
+                     }
+          },
+  
+          {
+          .bus = MX6UL_LCDIF1_BASE_ADDR,
+          .addr = 0,
+          .pixfmt = 24,
+          .detect = NULL,
+          .enable = do_enable_parallel_lcd,
+          .mode   = {
+                  .name           = "TFT50AB",
+                  .xres           = 800,
+                  .yres           = 480,
+                  .pixclock       = 108695,
+                  .left_margin    = 46,
+                  .right_margin   = 22,
+                  .upper_margin   = 23,
+                  .lower_margin   = 22,
+                  .hsync_len      = 1,
+                  .vsync_len      = 1,
+                  .sync           = 0,
+                  .vmode          = FB_VMODE_NONINTERLACED
+                     }
+          },
+  
+          {
+          .bus = MX6UL_LCDIF1_BASE_ADDR,
+          .addr = 0,
+          .pixfmt = 24,
+          .detect = NULL,
+          .enable = do_enable_parallel_lcd,
+          .mode   = {
+                  .name           = "TFT70AB",
+                  .xres           = 800,
+                  .yres           = 480,
+                  .pixclock       = 108695,
+                  .left_margin    = 46,
+                  .right_margin   = 22,
+                  .upper_margin   = 23,
+                  .lower_margin   = 22,
+                  .hsync_len      = 1,
+                  .vsync_len      = 1,
+                  .sync           = 0,
+                  .vmode          = FB_VMODE_NONINTERLACED
+                     }
+          }
+  
+  };
+  ```
+
+  
+
+- `include/configs/mx6ull_ming_emmc.h`
+
+  ```bash
+  把该文件里面所有的(应该有两处)
+  panel=TFT43AB
+  改为
+  panel=TFT50AB
+  ```
+
+##### 网络驱动
+
+
+
+#####  其他问题
+
+- 修改uboot启动打印的信息
+
+  ```bash
+  int checkboard(void)
+  {
+  	if (is_mx6ull_9x9_evk())
+  		puts("Board: MX6ULL 9x9 EVK\n");
+  	else
+  		puts("Board: MX6ULL MING EMMC BOARD\n");  // 修改的地方
+  
+  	return 0;
+  }
+  ```
+
+  ```
+  从EMMC启动linux
+  setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw' setenv bootcmd 'mmc dev 1; fatload mmc 1:1 80800000 zImage; fatload mmc 1:1 83000000 imx6ull-alientek-emmc.dtb; bootz 80800000 - 83000000;' 
+  saveenv
+  
+  从网络启动linux
+  setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw' setenv bootcmd 'tftp 80800000 zImage; tftp 83000000 imx6ull-alientek-emmc.dtb; bootz 80800000 - 83000000' 
+  saveenv
+  ```
+
+  
+
+
+

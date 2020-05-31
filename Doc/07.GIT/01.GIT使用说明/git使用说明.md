@@ -1507,6 +1507,18 @@ git push 相当于 git origin master
 
  ![](media/20170221095114372.jfif)
 
+## Ubuntu18.04安装gitk
+
+```bash
+sudo apt-get install gitk
+进入到工程目录输入
+gitk 即可
+```
+
+如果安装失败请参考该篇文章https://blog.csdn.net/wto882dim/article/details/86690232
+
+
+
 ## Win下的git的比较工具Byound Commpare
 
 Byound Commpare安装路径：D:/Program Files (x86)/Beyond Compare/BCompare.exe 打开C:\Users\Administrator.gitconfig

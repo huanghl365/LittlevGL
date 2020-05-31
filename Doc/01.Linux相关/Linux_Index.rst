@@ -12,7 +12,7 @@ Linux
    ./03.NUC972专题/NUC972_Index.rst
    ./04.IMX6专题/IMX6_Index.rst
    ./05.tslib移植/tslib移植.md
-   ./06.ubuntu下开发linux/ubuntu下vscode开发linux程序.md
+   ./06.vscode开发嵌入式linux/vscode搭建嵌入式Linux开发环境.md
    ./07.ubuntu安装Beyond/ubuntu安装Beyond.md
    ./08.Linux 输入输出重定向/Linux 输入输出重定向.md
    ./09.Shell脚本配置arm开发环境/Shell脚本配置arm开发环境.md
@@ -24,3 +24,4 @@ Linux
    ./15.Linux库使用说明/Linux库使用说明.md
    ./16.制作buildroot文件系统/制作buildroot文件系统.rst
    ./17.IMX6ULL官方Uboot移植/IMX6ULL官方Uboot移植.md
+   ./18.Linux驱动学习笔记/驱动.md
