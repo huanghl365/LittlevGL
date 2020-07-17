@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '技术笔记'
+project = 'LittlevGL'
 copyright = '2020，@xyan_m@163.com'
-author = 'xyan'
+author = 'FlyRobot'
 
 
 # -- General configuration ---------------------------------------------------

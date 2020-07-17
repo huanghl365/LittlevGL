@@ -16,49 +16,19 @@
 
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Linux相关
+   :maxdepth: 3
+   :caption: LittelvGL 基础控件学习篇
 
-   ./Doc/01.Linux相关/Linux_Index.rst
-  
-.. toctree::
-   :maxdepth: 1
-   :caption: 单片机相关
-
-   ./Doc/08.单片机/MCU_Index.rst
-
+   ./Doc/01.LittelvGL基本知识学习/LittlevGL.md
 
 .. toctree::
-   :maxdepth: 1
-   :caption: C语言相关
+   :maxdepth: 2
+   :caption: LittelvGL 应用开发篇
 
-   ./Doc/02.C语言相关/C_Index.rst
+   ./Doc/02.基于Linux系统嵌入式项目/基于Linux系统嵌入式项目.md
+   ./Doc/03.仿IOS桌面项目/仿IOS桌面项目.md
+   ./Doc/04.RT-thread+LittlevGL/RT-thread+LittlevGL.md
 
-
-.. toctree::
-   :maxdepth: 1
-   :caption: GUI相关
-
-   ./Doc/03.GUI相关/Gui_Index.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: QT
-
-   ./Doc/05.QT/QT_Index.rst
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: GIT
-
-   ./Doc/07.GIT/GIT_Index.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Sphinx
-
-   ./Doc/04.Sphinx/vscode+Sphinx+github+readdoc部署在线文档.md
 
 .. toctree::
    :maxdepth: 1
