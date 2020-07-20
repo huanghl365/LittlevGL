@@ -31,6 +31,12 @@
 
 
 .. toctree::
+   :maxdepth: 2
+   :caption: 荔枝派Nano填坑
+
+   ./Doc/05.荔枝派Nano/F1C100S.md
+
+.. toctree::
    :maxdepth: 1
    :caption: 关于
 
