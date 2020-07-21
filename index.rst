@@ -25,16 +25,19 @@
    :maxdepth: 2
    :caption: LittelvGL 应用开发篇
 
-   ./Doc/02.基于Linux系统嵌入式项目/基于Linux系统嵌入式项目.md
-   ./Doc/03.仿IOS桌面项目/仿IOS桌面项目.md
-   ./Doc/04.RT-thread+LittlevGL/RT-thread+LittlevGL.md
-
+   ./Doc/02.RT-thread_LittlevGL/RT-thread+LittlevGL.md
 
 .. toctree::
    :maxdepth: 2
-   :caption: 荔枝派Nano填坑
+   :caption: keil开发F1C100S/F1C200S
 
-   ./Doc/05.荔枝派Nano/F1C100S.md
+   ./Doc/04.MDK开发F1C100S/MDK_F1C100S.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: F1C1/200S Linux开发
+
+   ./Doc/03.F1C100S_Linux/F1C100S_Linux.md
 
 .. toctree::
    :maxdepth: 1

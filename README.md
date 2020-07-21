@@ -1,13 +1,21 @@
-# Readme
+## 关于
 
-感谢 https://gitee.com/mzy2364/LittlevGL_Demo提供示例工程
-本项目仅仅是做技术学习笔记，没有原创内容，仅仅方便使用LittlevGL而已。
+学习littlevGL，在线笔记记录网址：https://littlevgl.readthedocs.io/en/latest/
 
-## 版权声明
+荔枝派Nano填坑指南和在Linux开发指南参考文档:
 
-保留所有权利
-本项目只做交流学习使用，请勿用于商业应用。
+[https://littlevgl.readthedocs.io/en/latest/Doc/05.%E8%8D%94%E6%9E%9D%E6%B4%BENano/F1C100S.html#id1](https://littlevgl.readthedocs.io/en/latest/Doc/05.荔枝派Nano/F1C100S.html#id1)
 
-## 联系我们
 
-xyan_m@163.com
+
+![](media/image-20200720195702514.png)
+
+![](media/image-20200720203022740.png)
+
+![](media/image-20200720203107161.png)
+
+## 联系
+
+交流群：913307302
+
+以上所有文档不得用于行业用途，仅供学习。保留权利。
